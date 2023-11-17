@@ -4,6 +4,17 @@ table.game-of-life {
 
 td.cell {
     outline: solid 1px black;
-    width: 0.5em;
-    height: 0.5em;
+    width: 2em;
+    height: 2em;
+}
+
+td.cell.active {
+    outline: solid 1px white;
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+}
+
+td input {
+    display: none;
 }
