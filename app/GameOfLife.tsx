@@ -7,7 +7,7 @@ export default function GameOfLife({ height, width }: any) {
   for (let i = 0; i < height; i++) {
     initalConfig.push([]);
     for (let j = 0; j < width; j++) {
-      initalConfig[i].push(false);
+      initalConfig[i].push("");
     }
   }
   const [config, setConfig] : any = useState(initalConfig);
@@ -33,6 +33,47 @@ export default function GameOfLife({ height, width }: any) {
     updateDisplay();
   }
 
+  function updateGameState() {
+    const newConfig : any = [];
+    for(let i=0; i<height; i++){
+        newConfig.push([]);
+        for(let j=0; j<width; j++){
+            let counter : number = 0;
+            for(let k=i-1; k<i+2; k++){
+                for(let l=j-1; l<j+2; l++){
+                    const isCurrentCell = k === i && l === j;
+                    if(!isCurrentCell && typeof config[k] !== "undefined" && typeof config[k][l] !== "undefined" && config[k][l] === "active"){
+                        counter++;
+                    }
+                }
+            }
+            if(counter < 2 || counter > 3){
+                newConfig[i].push("");
+            } else if(counter === 2){
+                newConfig[i].push(config[i][j]);
+            } else if(counter === 3) {
+                newConfig[i].push("active");
+            }
+        }
+    }
+    for(let i=0; i<height; i++){
+        for(let j=0; j<width; j++){
+            updateConfig(i, j, newConfig[i][j]);
+        }
+    }
+    setConfig(newConfig);
+  }
+
+  const [intervalId, setIntervalId] : any = useState(null);
+
+  function runGame(){
+    setIntervalId(setInterval(updateGameState, 100));
+  }
+
+  function stopGame(interval: any) {
+    clearInterval(interval);
+    setConfig(initalConfig);
+  }
 
   return (
     <div>
@@ -42,14 +83,16 @@ export default function GameOfLife({ height, width }: any) {
         height={height}
         width={width}
       />
-      {/* <PlayButton updateConfig={updateConfig}/> */}
-      <p>{display}</p>
+      <GameButton name={'Play'} handleClick={runGame} inputs={[]}/>
+      <GameButton name={'Clear'} handleClick={stopGame} inputs={[intervalId]}/>
+      <input type="number"/>
+      {/* <p>{display}</p> */}
     </div>
   );
 }
 
-function PlayButton({ updateConfig }: any) {
-  return <button onClick={() => updateConfig(0, 0, 1)}>Play</button>;
+function GameButton({name, handleClick, inputs}: any) {
+  return <button className="game-button" onClick={() => handleClick(...inputs)}>{name}</button>;
 }
 
 function GameTable({ height, width, activeStates, updateConfig }: any) {
@@ -89,10 +132,10 @@ function GameRow({ rowNum, rowLen, activeStates, updateConfig }: any) {
 
 function Cell({ id, position, activeState, updateConfig }: any) {
   const [state, setState] = useState(activeState);
-  const activeClass = state ? " " + "active" : "";
+  const activeClass = " " + activeState;
 
   function handleClick() {
-    const newState : boolean = !state;
+    const newState : string = state ? "" : "active";
     setState(newState);
     updateConfig(...position, newState);
   }

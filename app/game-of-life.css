@@ -18,3 +18,9 @@ td.cell.active {
 td input {
     display: none;
 }
+
+.game-button {
+    outline: solid 2px black;
+    padding: 0em 1em;
+    margin: 1em;
+}
