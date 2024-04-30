@@ -10,6 +10,7 @@ export default function GameOfLife({ height, width }: any) {
       initalConfig[i].push("");
     }
   }
+
   const [config, setConfig] : any = useState(initalConfig);
 
   const [display, setDisplay] : any = useState(0);
@@ -85,7 +86,6 @@ export default function GameOfLife({ height, width }: any) {
       />
       <GameButton name={'Play'} handleClick={runGame} inputs={[]}/>
       <GameButton name={'Clear'} handleClick={stopGame} inputs={[intervalId]}/>
-      <input type="number"/>
       {/* <p>{display}</p> */}
     </div>
   );
