@@ -1,6 +1,6 @@
 # Conway Game of Life Simulator
 
-I created this simulator with React, using the [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) template from [Next.js](https://nextjs.org/). This is an ongoing project that will have further updates.
+A simulator for Conway's Game of Life, written using React. Further updates will be added over time.
 
 ## What is the Game of Life?
 Existential answers aside, Conway's Game of Life is a model starting from an initial state on a two-dimensional grid, and then proceeds over an infinite number of "steps". Cells on the grid have two possible states: live or dead. 
@@ -77,7 +77,7 @@ You can see a more extensive list of patterns [here](https://en.wikipedia.org/wi
 
 After trying a few known combinations of live cells, put in your own initial states and watch what happens - sometimes the configuration forms into still lifes or oscillators, and sometimes chaos unfolds!
 
-## Learn More about Next.js
-
+## Learn about Next.js
+- The basic set-up for this project was done using [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
