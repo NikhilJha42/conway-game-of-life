@@ -77,7 +77,7 @@ export default function GameOfLife({ height, width }: any) {
   }
 
   return (
-    <div id="#game-of-life">
+    <div id="game-of-life">
       <GameTable
         updateConfig={updateConfig}
         activeStates={config}
