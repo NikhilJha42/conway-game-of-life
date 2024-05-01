@@ -12,16 +12,16 @@ With each step in the model, cells interact with their eight adjacent cells (hor
 
 1. A live cell with fewer than two adjacent live cells dies;
 
-![Live cell](images/LiveCell.png) ![Arrow](images/Black_Right_Arrow.png) ![Empty grid](images/EmptyGrid.png)
+![Live cell](images/LiveCell.png) ![Arrow](images/Arrow.png) ![Empty grid](images/EmptyGrid.png)
 
 
 2. A live cell with more than three adjacent live cells dies;
 
-![Five Live Cells](images/Five%20Live%20Cells.png) ![Arrow](images/Black_Right_Arrow.png) ![Four Live Cells](images/Four%20Live%20Cells.png)
+![Five Live Cells](images/Five%20Live%20Cells.png) ![Arrow](images/Arrow.png) ![Four Live Cells](images/Four%20Live%20Cells.png)
 
 3. A dead cell with exactly three adjacent lives cells becomes live;
 
-![Three Live Cells](images/Three%20Live%20Cells.png) ![Arrow](images/Black_Right_Arrow.png) ![Four Live Cells Block](images/FourLiveCellsBlock.png)
+![Three Live Cells](images/Three%20Live%20Cells.png) ![Arrow](images/Arrow.png) ![Four Live Cells Block](images/FourLiveCellsBlock.png)
 
 Note that any dead cells to which condition 3 does not apply, and any live cells with two or three live neighbours, do not change.
 
