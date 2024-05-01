@@ -1,4 +1,4 @@
-table.game-of-life {
+table.game-of-life tbody{
     outline: solid 2px black;
 }
 
