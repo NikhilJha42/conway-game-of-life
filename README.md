@@ -50,26 +50,28 @@ Then open [http://localhost:3000](http://localhost:3000) to view the simulator.
 2. Press play.
 3. Observe.
 
+![Selecting Live Cells](images/Selecting%20Live%20Cells.gif)
+
 That's it! 
 
-Of course, the Game of Life is mathematically interesting because some configurations are stable, or have a repeating behaviour.
+Of course, the Game of Life is interesting because some configurations are stable, or have a repeating behaviour.
 
 There are three main patterns that arise:
 
 - Still lifes - these are the stable states, which are either initially configured or are evolved into.
 
-![Beehive](images/Beehive.png)
+![Beehive](images/Beehive.png) A beehive.
 
 - Oscillators - a pattern of re-ocurring states over finite periods of time.
 
-![Blinker](images/Blinker.gif)
+![Blinker](images/Blinker.gif) A blinker.
 - Spaceships - these are patterns that translate themselves, or "fly" across the grid.
 
-![Glider](images/Glider.gif)
+![Glider](images/Glider.gif) A glider.
 
 - There are also configurations that can create spaceships!
 
-![Gosper Glider Gun](images/GosperGliderGun.gif)
+![Gosper Glider Gun](images/GosperGliderGun.gif) The Gosper Glider Gun.
 
 You can see a more extensive list of patterns [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
