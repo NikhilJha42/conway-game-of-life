@@ -1,4 +1,4 @@
-# Conway Game of Life Simulator
+# Conway's Game of Life Simulator
 
 A simulator for Conway's Game of Life, written using React. Further updates will be added over time.
 
