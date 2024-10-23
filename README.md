@@ -54,9 +54,7 @@ Then open [http://localhost:3000](http://localhost:3000) to view the simulator.
 
 That's it! 
 
-Of course, the Game of Life is interesting because some configurations are stable, or have a repeating behaviour.
-
-There are three main patterns that arise:
+Of course, the Game of Life is interesting because some configurations are stable, or have a repeating behaviour:
 
 - Still lifes - these are the stable states, which are either initially configured or are evolved into.
 
